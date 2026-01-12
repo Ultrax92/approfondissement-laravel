@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             SettingsSeeder::class,
-            OrderSeeder::class, // <-- Ajoute cette ligne
+            OrderSeeder::class,
+            GroupUserSeeder::class,
         ]);
     }
 }

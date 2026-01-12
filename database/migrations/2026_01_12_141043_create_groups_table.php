@@ -11,17 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
-
-            // Clé étrangère vers users
-            $table->foreignId('user_id')
-                ->constrained('users')
-                ->cascadeOnDelete();
-
-            $table->integer('amount');
-            $table->string('status');
-
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -31,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('groups');
     }
 };
