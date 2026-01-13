@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('subscription_orders', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('price');
+            $table->decimal('price', 8, 2);
             $table->integer('duration_months'); // La durée spécifique à l'abonnement
             $table->timestamps();
         });
