@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             OrderSeeder::class,
             GroupUserSeeder::class,
+            PolymorphicSeeder::class,
         ]);
     }
 }
